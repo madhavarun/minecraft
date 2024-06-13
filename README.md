@@ -17,8 +17,12 @@
 </p>
 
 ## Usage
+> [!WARNING]
+Only download mods from sources you trust. Mods can execute arbitrary code. In past there have been multiple cases of malicious people including malware inside mods. It is very rare, but something everyone should be aware of.
 
-⚠️ Reminder: Only download mods, plugins etc from sources you trust. Recently it has been discovered that several CurseForge projects (that are now removed) contained malware called "[Fractureiser](https://github.com/fractureiser-investigation/fractureiser)". Even though fractureiser was distributed in CurseForge projects, this kind of malware can be found in any platform so it's important to only download mods/plugins from trusted sources. ⚠️
+> [!NOTE]
+Adding support for new mods in Catppuccin UI is temporarily paused. I plan to add support for more mods in future, so feel free to make mod support requests.
+
 
 ### Resource Pack
 1. Go to our Modrinth [versions page](https://modrinth.com/resourcepack/catppuccin-ui/versions) and click on version with your preferred flavor and the Minecraft version you're playing.
