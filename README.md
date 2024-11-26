@@ -18,17 +18,17 @@
 
 ## Usage
 > [!WARNING]
-Only download mods from sources you trust. Mods can execute arbitrary code. In past there have been multiple cases of malicious people including malware inside mods. It is very rare, but something everyone should be aware of.
+Only download mods from sources you trust. Mods can execute arbitrary code. In the past, there have been multiple cases of malicious people including malware inside mods. It is very rare, but something everyone should be aware of.
 
 > [!NOTE]
 Adding support for new mods in Catppuccin UI is temporarily paused. I plan to add support for more mods in future, so feel free to make mod support requests.
 
 
 ### Resource Pack
-1. Go to our Modrinth [versions page](https://modrinth.com/resourcepack/catppuccin-ui/versions) and click on version with your preferred flavor and the Minecraft version you're playing.
+1. Go to our Modrinth [versions page](https://modrinth.com/resourcepack/catppuccin-ui/versions) and click on the version with your preferred flavor and the Minecraft version you're playing.
 2. Scroll down to the "Files" section and download `Catppuccin {flavor} {accent color}.zip` zip file with your preferred accent color.
-3. Move that zip file you downloaded to your `resourcepacks` folder in your `.minecraft` folder.
-4. Launch Minecraft and open resource packs menu from options.
+3. Move that zip file you downloaded to the `resourcepacks` folder within your `.minecraft` directory (or your Minecraft profile folder, depending on your installation).
+4. Launch Minecraft and open the resource packs menu from the options.
 5. Select the pack and press done.
 
 ### Shaders
