@@ -48,6 +48,7 @@ Adding support for new mods in Catppuccin UI is temporarily paused. I plan to ad
 - [JustLetterV](https://github.com/JustLetterV)
 - [Gingeh](https://github.com/Gingeh)
 - [VoidTwo](https://github.com/VoidTwo)
+- [Scarce Koi](https://github.com/scarcekoi)
 
 &nbsp;
 
