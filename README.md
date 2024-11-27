@@ -32,12 +32,12 @@ Adding support for new mods in Catppuccin UI is temporarily paused. I plan to ad
 5. Select the pack and press done.
 
 ### Shaders
-1. Install Iris and Sodium
-2. Download a `catppuccin-shaders.zip` zip file from the [releases](https://github.com/catppuccin/minecraft/releases) page
-3. Move it to your shader packs folder
-4. Go to Options -> Video -> Shader Packs
-5. Select it
-6. Set the flavor in the shader settings
+1. Install [Iris](https://modrinth.com/mod/iris) and [Sodium](https://modrinth.com/mod/sodium).
+2. Download a `catppuccin-shaders.zip` zip file from the [releases](https://github.com/catppuccin/minecraft/releases) page.
+3. Move it to your shader packs folder within your `.minecraft` directory (or your Minecraft profile folder, depending on your installation).
+4. Go to Options -> Video -> Shader Packs.
+5. Select the pack.
+6. Set the flavor in the shader settings.
 
 ## 💝 Thanks to
 
