@@ -147,12 +147,14 @@ def main():
     # Create a map of red2 values since they don't exist in the catppuccin palette
     red2 = {PALETTE.mocha.name: darker_red(PALETTE.mocha.colors.red.hsl),
             PALETTE.macchiato.name: darker_red(PALETTE.macchiato.colors.red.hsl),
-            PALETTE.frappe.name: darker_red(PALETTE.frappe.colors.red.hsl),
+            "Frappe": darker_red(PALETTE.frappe.colors.red.hsl),
             PALETTE.latte.name: darker_red(PALETTE.latte.colors.red.hsl)}
 
     # Start to generate different flavors and accent colors from the template.
     for flavor_obj in PALETTE:
         flavor = flavor_obj.name
+        if flavor == "Frappé":
+            flavor = "Frappe"
         print(f'\nStarting to create flavor {flavor} from template {template_version}!\n')
 
         
@@ -180,7 +182,7 @@ def main():
             (250, 179, 135): rgb_to_tuple(flavor_obj.colors.peach.rgb),
             (235, 160, 172): rgb_to_tuple(flavor_obj.colors.maroon.rgb),
             (243, 139, 168): rgb_to_tuple(flavor_obj.colors.red.rgb),
-            (181, 103, 125): red2[flavor_obj.name],
+            (181, 103, 125): red2[flavor],
             (203, 166, 247): rgb_to_tuple(flavor_obj.colors.mauve.rgb),
             (245, 194, 231): rgb_to_tuple(flavor_obj.colors.pink.rgb),
             (242, 205, 205): rgb_to_tuple(flavor_obj.colors.flamingo.rgb),
@@ -523,9 +525,8 @@ def rgb_to_tuple(colorRGB):
     return (colorRGB.r, colorRGB.g, colorRGB.b)
 
 # Applies a -26% lightness adjustment to the color
-def darker_red(colorRGB):
-    hls_tuple = rgb_to_hls(*rgb_to_tuple(colorRGB))
-    red2_hls_tuple = (hls_tuple[0], hls_tuple[1] * 0.74, hls_tuple[2])
+def darker_red(colorHSL):
+    red2_hls_tuple = (colorHSL.h, colorHSL.l * 0.74, colorHSL.s)
     return tuple(round(i) for i in hls_to_rgb(*red2_hls_tuple))
 
 if __name__ == '__main__':
