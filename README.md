@@ -45,8 +45,9 @@ options:
                         Accent color to create. If not specified, all accent colors will be created.
 ```
 1. From the root directory, run `cd resource-packs/Catppuccin UI`.
-2. Run `python create_flavors.py`. Optionally use the flags `-f` and `-a` to specitify for an single combination.
-3. The packs should be generated in the `output` directory inside the Catppuccin UI directory.
+2. If you don't have the dependencies installed, install them with `pip install pillow catppuccin` before runnning the script.
+3. Run `python create_flavors.py`. Optionally use the flags `-f` and `-a` to specitify for an single combination.
+4. The packs should be generated in the `output` directory inside the Catppuccin UI directory.
 
 ### Shaders
 1. Install [Iris](https://modrinth.com/mod/iris) and [Sodium](https://modrinth.com/mod/sodium).
