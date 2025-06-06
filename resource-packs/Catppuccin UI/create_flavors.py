@@ -196,13 +196,15 @@ def main():
     for flavor_obj in PALETTE:
         flavor = flavor_obj.name
         
+        # Frappe accented e workaround.
+        if flavor == "Frappé":
+            flavor = "Frappe"
+
+
         # Skip flavors that are not in the selected flavors.
         if flavor not in flavor_names:
             continue
 
-        # Frappe accented e workaround.
-        if flavor == "Frappé":
-            flavor = "Frappe"
         print(f'\nStarting to create flavor {flavor} from template {template_version}!\n')
 
         
