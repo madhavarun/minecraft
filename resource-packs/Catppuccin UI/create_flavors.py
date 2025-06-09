@@ -187,19 +187,8 @@ def main():
             print(f'ERROR: accent \'{selected_accent}\' not found! Choose from the available accents.')
             selected_accent = None
     # Get all flavors and accent colors from the catppuccin palette library if not specified.
-    flavor_names = [selected_flavor] if selected_flavor else flavor_names
+    flavor_names = [selected_flavor] if selected_flavor else flavor_names + ['Frappe'] # Frappe accented e workaround.
     accent_colors = [selected_accent] if selected_accent else accent_colors
-
-    if dry_run:
-        print(
-            'Running in dry-run mode. No files will be created or modified.\n'
-            'You can remove the -d or --dry-run argument to create the flavors.')
-        
-        print(f"Selected flavors: {', '.join(flavor_names)}\n"
-              f"Selected accent colors: {', '.join(accent_colors)}\n")
-            
-        print('Dry-run completed. No files were created or modified.')
-        return
 
     # Create a map of red2 values since they don't exist in the catppuccin palette
     red2 = {PALETTE.mocha.name: darker_red(PALETTE.mocha.colors.red.hsl),
@@ -207,6 +196,11 @@ def main():
             "Frappe": darker_red(PALETTE.frappe.colors.red.hsl),
             PALETTE.latte.name: darker_red(PALETTE.latte.colors.red.hsl)}
 
+    if dry_run:
+            print(
+                'Running in dry-run mode. No files will be created or modified.\n'
+                'You can remove the -d or --dry-run argument to create the flavors.')
+            
     # Start to generate different flavors and accent colors from the template.
     for flavor_obj in PALETTE:
         flavor = flavor_obj.name
@@ -218,6 +212,11 @@ def main():
 
         # Skip flavors that are not in the selected flavors.
         if flavor not in flavor_names:
+            continue
+
+        if dry_run:
+            print(f"Processing flavor: {flavor}\n"
+                f"Selected accent colors: {', '.join(accent_colors)}\n")
             continue
 
         print(f'\nStarting to create flavor {flavor} from template {template_version}!\n')
